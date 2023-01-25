@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block title %}Lugares{% endblock title %}
+
+{% block content %}
+	{% for lugares in object_list %}
+		<div>
+			<h2><a href="{{ lugares.get_absolute_url }}">{{ lugares.nombre }}</a></h2>
+		</div>
+	{% endfor %}
+{% endblock content %}

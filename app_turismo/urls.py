@@ -26,4 +26,5 @@ urlpatterns = [
     # Apps locales
     path('accounts/', include('users.urls')),
     path('', include('pages.urls')),
+    path('lugares/', include('lugares.urls')),
 ]

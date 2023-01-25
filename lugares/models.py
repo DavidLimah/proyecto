@@ -1,3 +1,19 @@
 from django.db import models
+from django.urls import reverse
 
-# Create your models here.
+# Tablas
+class Lugares(models.Model):
+	nombre = models.CharField(max_length=200)
+	descripcion = models.CharField(max_length=200)
+	created = models.DateTimeField(auto_now_add=True)
+	updated = models.DateTimeField(auto_now_add=True)
+
+	class Meta:
+		verbose_name = 'lugar'
+		verbose_name_plural = 'lugares'
+
+	def __str__(self):
+		return self.nombre
+
+	def get_absolute_url(self):
+		return reverse('lugares_detail', args=[str(self.id)])

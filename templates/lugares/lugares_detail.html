@@ -1,0 +1,10 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ lugares.nombre }}{% endblock title %}
+
+{% block content %}
+<div class="lugares-detail">
+	<h2><a href="">{{ lugares.nombre }}</a></h2>
+	<p>Author: {{ lugares.descripcion }}</p>
+</div>
+{% endblock content %}
