@@ -4,8 +4,19 @@
 
 {% block content %}
 	{% for lugares in object_list %}
-		<div>
-			<h2><a href="{{ lugares.get_absolute_url }}">{{ lugares.nombre }}</a></h2>
-		</div>
+	<div class="card mb-3" style="max-width: 1024px;">
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<img class="lugarescover card-img-top" src="{{ lugares.cover.url}}" alt="{{ lugares.nombre }}">
+    		</div>
+    		<div class="col-md-8">
+    			<div class="card-body">
+	    			<h2 class="card-title"><a href="{{ lugares.get_absolute_url }}">{{ lugares.nombre }}</a></h2>
+	    			<p class="card-text">Descripción: {{ lugares.descripcion }}</p>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<br><br>
 	{% endfor %}
 {% endblock content %}

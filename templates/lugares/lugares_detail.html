@@ -3,8 +3,13 @@
 {% block title %}{{ lugares.nombre }}{% endblock title %}
 
 {% block content %}
-<div class="lugares-detail">
-	<h2><a href="">{{ lugares.nombre }}</a></h2>
-	<p>Author: {{ lugares.descripcion }}</p>
+<h5><a class="p-2 my-0 mr-md-auto" href="{% url 'lugares_list' %}" style="color: grey;">Volver</a></h5>
+<div class="card">
+  <div class="card-body">
+  	<h2 class="card-title"><a href="">{{ lugares.nombre }}</a></h2>
+    <p class="card-text">Descripción: {{ lugares.descripcion }}</p>
+  </div>
+  <img class="lugarescover card-img-top" src="{{ lugares.cover.url}}" alt="{{ lugares.nombre }}">
 </div>
+<br><br>
 {% endblock content %}
