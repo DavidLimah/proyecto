@@ -1,10 +1,15 @@
 {% extends '_base.html' %}
 
-{% block title %}{{ object.title }}{% endblock title %}
+{% block title %}{{ artecultura.nombre }}{% endblock title %}
 
 {% block content %}
-<div class="book-detail">
-	<h2><a href="">{{ artecultura.nombre }}</a></h2>
-	<p>Descripción: {{ artecultura.descripcion }}</p>
+<h5><a class="p-2 my-0 mr-md-auto" href="{% url 'artecultura_list' %}" style="color: grey;">Volver</a></h5>
+<div class="card">
+  <div class="card-body">
+  	<h2 class="card-title"><a href="">{{ artecultura.nombre }}</a></h2>
+    <p class="card-text">Descripción: {{ artecultura.descripcion }}</p>
+  </div>
+  <img class="lugarescover card-img-top" src="{{ artecultura.cover.url}}" alt="{{ artecultura.nombre }}">
 </div>
+<br><br>
 {% endblock content %}

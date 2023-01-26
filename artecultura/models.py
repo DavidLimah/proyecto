@@ -5,7 +5,7 @@ from django.urls import reverse
 class Artecultura(models.Model):
 	nombre = models.CharField(max_length=200)
 	descripcion = models.CharField(max_length=250)
-	# cover = models.ImageField(upload_to='covers/')
+	cover = models.ImageField(upload_to='covers/', blank=True)
 	created = models.DateTimeField(auto_now_add=True)
 	updated = models.DateTimeField(auto_now_add=True)
 
