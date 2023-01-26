@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'lugares.apps.LugaresConfig', # new
+    'artecultura.apps.ArteculturaConfig',
 ]
 
 # django-crispy-forms

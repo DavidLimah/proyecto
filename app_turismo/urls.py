@@ -28,5 +28,6 @@ urlpatterns = [
     # Apps locales
     path('accounts/', include('users.urls')),
     path('', include('pages.urls')),
+    path('artecultura/', include('artecultura.urls')),
     path('lugares/', include('lugares.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
