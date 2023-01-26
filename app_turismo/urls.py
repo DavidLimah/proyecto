@@ -31,5 +31,6 @@ urlpatterns = [
     path('artecultura/', include('artecultura.urls')),
     path('gastronomia/', include('gastronomia.urls')),
     path('lugares/', include('lugares.urls')),
+    path('empresa/', include('empresa.urls')),
     path('evento/', include('evento.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

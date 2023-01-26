@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block title %}Empresas turísticas{% endblock title %}
+
+{% block content %}
+	{% for empresa in object_list %}
+	<div class="card mb-3" style="max-width: 1024px;">
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<img class="gastronomiacover card-img-top" src="{{ empresa.cover.url}}" alt="{{ empresa.nombre }}">
+    		</div>
+    		<div class="col-md-8">
+    			<div class="card-body">
+	    			<h2 class="card-title"><a href="{{ empresa.get_absolute_url }}">{{ empresa.nombre }}</a></h2>
+	    			<p class="card-text">Descripción: {{ empresa.descripcion }}</p>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<br><br>
+	{% endfor %}
+{% endblock content %}
