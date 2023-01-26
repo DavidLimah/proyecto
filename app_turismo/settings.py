@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'lugares.apps.LugaresConfig',
     'artecultura.apps.ArteculturaConfig',
     'gastronomia.apps.GastronomiaConfig',
+    'evento.apps.EventoConfig',
 ]
 
 # django-crispy-forms
